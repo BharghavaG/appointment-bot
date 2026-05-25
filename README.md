@@ -2,6 +2,8 @@
 
 A fully voice-interactive, local AI receptionist built with Python and Streamlit. This application allows users to speak directly to an AI assistant to book a dental appointment, and it automatically schedules the event on a Google Calendar.
 
+---
+
 ##  Features
 
 - ** Voice-to-Text**: Listens to the user's voice using the computer's microphone and transcribes it locally using OpenAI's **Whisper** model.
@@ -10,12 +12,16 @@ A fully voice-interactive, local AI receptionist built with Python and Streamlit
 - ** Google Calendar Integration**: Automatically authenticates via OAuth 2.0 and schedules the appointment directly onto the user's Google Calendar.
 - ** Local Web UI**: Provides a clean, modern chat interface built with **Streamlit**.
 
+---
+
 ##  Prerequisites
 
 Before you begin, ensure you have the following installed:
 - **Python 3.8+**
 - A Google Cloud account with the **Google Calendar API** enabled.
 - A **Groq API Key** (for Llama 3 access).
+
+---
 
 ##  Installation & Setup
 
@@ -52,6 +58,8 @@ Before you begin, ensure you have the following installed:
    - Navigate to **Credentials**, click **Create Credentials > OAuth client ID**, and choose **Desktop App**.
    - Download the JSON file and rename it to `credentials.json`. Place it in the root directory of this project.
 
+---
+
 ##  Usage
 
 Run the Streamlit application:
@@ -64,10 +72,24 @@ streamlit run app.py
 2. A browser window will open. Select your Google account and **CRITICALLY: check the box granting permission to view and edit events on your calendar**.
 3. Click **"Start Voice Assistant"** to begin talking to the bot!
 
+---
+
 ## Architecture Note: JSON Extraction Pattern
 
 This bot bypasses native LLM "tool-calling" API features, which can sometimes be unstable or hallucinate XML tags on open-weight models. Instead, it uses a robust **Structured JSON Extraction Pattern**. The LLM is prompted to converse naturally until it has all the necessary information, at which point it outputs a rigid Markdown JSON block. The Python backend intercepts this JSON, executes the calendar booking, and asks the LLM to generate a natural confirmation message.
 
+---
+
 ##  License
 
 This project is licensed under the MIT License.
+
+---
+
+## If you like this project
+Consider starring the repository to support the project.
+
+---
+
+## Contact
+For any questions or suggestions, please open an issue or contact us at goudibharghava@gmail.com.
