@@ -4,13 +4,13 @@ A fully voice-interactive, local AI receptionist built with Python and Streamlit
 
 ##  Features
 
-- ** Voice-to-Text**: Listens to the user's voice using the computer's microphone and transcribes it locally using OpenAI's **Whisper** model (optimized to run on CPU without requiring `ffmpeg`).
+- ** Voice-to-Text**: Listens to the user's voice using the computer's microphone and transcribes it locally using OpenAI's **Whisper** model.
 - ** Advanced LLM Brain**: Uses **Groq's Llama-3.3-70b-versatile** model to hold natural, human-like conversations and extract booking details (Name, Date, Time) using a highly stable Prompt-Engineered JSON extraction pattern.
 - ** Text-to-Speech**: Converts the AI's responses back into spoken audio using **Google TTS (gTTS)**.
 - ** Google Calendar Integration**: Automatically authenticates via OAuth 2.0 and schedules the appointment directly onto the user's Google Calendar.
 - ** Local Web UI**: Provides a clean, modern chat interface built with **Streamlit**.
 
-## 🛠️ Prerequisites
+##  Prerequisites
 
 Before you begin, ensure you have the following installed:
 - **Python 3.8+**
